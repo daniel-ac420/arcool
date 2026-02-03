@@ -1,0 +1,142 @@
+.section--request_catalog {
+	margin: 35px 0 10px;
+}
+
+.section--request_catalog .inner {
+	position: relative;
+	justify-content: space-between;
+    padding: 30px 20px;
+	background-color: #f3f3f3;
+}
+
+.section--request_catalog .inner-part-right {
+    max-width: calc((100% - 50px) * 0.55);
+}
+
+.section--request_catalog .section--request__image {
+    position: absolute;
+    top: 15px;
+}
+
+.section--request__image_mobile {
+	display: none;
+}
+
+.section--request_catalog .submit-box {
+    flex-direction: row;
+}
+
+
+
+@media (max-width: 1366px) {
+	
+	.section--request_catalog .section--request__image {
+		position: absolute;
+		top: 40px;
+		max-width: 350px;
+	}
+	
+}
+
+
+
+@media (max-width: 1180px) {
+	
+	.section--request_catalog .section--request__image {
+		position: absolute;
+		top: 95px;
+		max-width: 300px;
+	}
+	
+}
+
+
+
+@media (max-width: 1024px) {
+	
+	.section--request_catalog .inner {
+		flex-direction: unset;
+	}
+	
+	.section--request_catalog .section--request__image {
+		max-width: unset;
+    	top: -10px;
+	}
+	
+}
+
+
+
+@media (max-width: 992px) {
+	
+	.section--request_catalog .section--request__image {
+    	top: 15px;
+	}
+	
+}
+
+
+@media (max-width: 880px) {
+	
+	.section--request_catalog .section--request__image {
+		max-width: 350px;
+    	top: 40px;
+	}
+	
+}
+
+
+
+@media (max-width: 768px) {
+	
+	.section--request_catalog .section--request__image {
+		max-width: 300px;
+    	top: 95px;
+	}
+	
+}
+
+
+
+@media (max-width: 767px) {
+	
+	.section--request_catalog .inner {
+		flex-direction: column-reverse;
+		align-items: center;
+		padding: 25px 0 0;
+	}
+	
+	.section--request__image_desktop {
+		display: none;
+	}
+	
+	.section--request__image_mobile {
+		display: block;
+	}
+		
+	.section--request_catalog .section--request__image {
+		position: static;
+		width: 100%;
+		max-width: unset;
+	}
+	
+	.section--request_catalog .inner-part-right {
+		max-width: 60%;
+		text-align: center;
+	}
+	
+	.section--request_catalog .title--section {
+		text-align: center;
+	}
+	
+}
+
+
+
+@media (max-width: 414px) {
+
+	.section--request_catalog .inner-part-right {
+		max-width: 80%;
+	}
+	
+}

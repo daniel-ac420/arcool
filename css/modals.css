@@ -1,0 +1,113 @@
+/* переопределяем стили fancybox */
+div.fancybox__content {
+    padding: 40px 20px 20px;
+    border-radius: 20px;
+}
+
+.modal__title {
+    margin-bottom: 18px;
+    font-family: 'Inter';
+    font-size: 36px;
+    font-weight: 600;
+    line-height: calc(43.57/36);
+    color: var(--colorBlackMain);
+}
+
+#modal-feedback {
+    width: 100%;
+    max-width: 1031px;
+}
+
+.modal-feedback__content {
+    display: flex;
+    gap: 23px;
+}
+
+.modal-feedback__textarea {
+    display: none;
+	resize: none;
+}
+
+.modal-feedback__col {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    width: 100%;
+/*    max-width: 456px;*/
+}
+
+.modal-feedback__input {
+    width: 100%;
+}
+
+#modal-feedback .filter__form-label {
+	gap: 10px;
+	margin-bottom: 0;
+}
+
+#modal-feedback .filter__form-label .checkout-item__link {
+	color: var(--colorRose);
+}
+
+#modal-feedback textarea.modal-feedback__input:not(.modal-feedback__textarea) {
+	min-height: 250px;
+}
+
+
+#modal-request .title--section {
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 44px;
+	color: var(--colorBlack);
+}
+
+#modal-request .section--request {
+	margin-top: 0;
+}
+
+#modal-request .section--request .inner {
+    flex-direction: column;
+    gap: 20px;
+	padding: 0;
+	border: none;
+}
+
+
+
+/* --- ADAPTING --- */
+@media (min-width: 1023px) {
+	
+	div.fancybox__content {
+        padding: 20px;
+    }
+	
+	.modal-feedback__textarea {
+        display: block;
+        width: 100%;
+        max-width: 465px;
+    }
+	
+    .modal-feedback__item--hide-on-pc {
+        display: none;
+    }
+	
+}
+
+
+@media (max-width: 767px) {
+	
+	#modal-feedback .filter__form-label {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+	}
+	
+	#modal-feedback .filter__form-label .modal-feedback__item {
+		width: 100%;
+	}
+	
+	#modal-feedback .filter__form-label .modal-feedback__item .button {
+		width: 100%;
+	}
+	
+}

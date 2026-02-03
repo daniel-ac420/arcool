@@ -1,0 +1,616 @@
+body, html {
+	height: 100%;
+	scroll-behavior: smooth; /* плавная прокрутка */
+}
+
+html {
+	position: relative; /* ↓ */
+	overflow-x: hidden; /* запрет прокрутки при открытии модальных окон */
+}
+
+body {
+	overflow-x: hidden; /* запрет прокрутки при открытии модальных окон */
+	height: auto; /* убирает дополнительный вертикальный у body, добавляемый предыдущим свойством */
+	color: var(--colorBlackMain); /* default color */
+/*	background-color: #ffffff;*/
+	font-family: "Inter", Arial, sans-serif; /* all text */
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-size: 16px; /* default size */
+	font-weight: 400; 
+	line-height: 1.5;
+}
+
+.wrapper-height {
+	min-height: 100%;
+/*	min-height: 100vh;*/
+	display: flex;
+	flex-direction: column;
+}
+
+.inter-100 {
+	font-weight: 100;
+}
+
+.inter-200 {
+	font-weight: 200;
+}
+
+.inter-300 {
+	font-weight: 300;
+}
+
+.inter-400 {
+	font-weight: 400;
+}
+
+.inter-500 {
+	font-weight: 500;
+}
+
+.inter-600 {
+	font-weight: 600;
+}
+
+.inter-700 {
+	font-weight: 700;
+}
+
+.inter-800 {
+	font-weight: 800;
+}
+
+.inter-900 {
+	font-weight: 900;
+}
+
+.main {
+	flex-grow: 1; /* растягивает пространство между хэдером и футером */
+/*	padding-top: 120px;*/
+}
+
+.wrapper {
+	max-width: 1220px; /* +20px side padding */
+	margin: 0 auto;
+	padding: 0 10px;
+	flex-basis: 100%; /* чтобы не задавать отдельно width */
+}
+
+.wrapper--menu {
+	position: relative;
+}
+
+.section:last-child {
+	margin-bottom: 100px;
+}
+
+.title {
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 44px;
+}
+
+.title--main {
+	margin-bottom: 8px;
+	font-size: 42px;
+	line-height: 1;
+}
+
+.title--section {
+	margin-bottom: 35px;
+/*
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 100%;
+*/
+	text-align: center;
+
+}
+
+.title--section_content {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 39px;
+	text-align: left;
+}
+
+ol, ul {
+    padding-left: unset;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: unset;
+}
+
+a {
+	display: inline-block;
+	text-decoration: unset;
+	line-height: normal;
+	color: inherit;
+	outline-style: solid;
+	outline-width: 1px;
+	outline-color: transparent;
+	outline-offset: 5px;
+	transition: all 0.75s;
+}
+
+/*
+a:hover {
+    color: var(--colorYellow);
+    border-bottom: 1px solid var(--colorBlack);
+    transform: scale(1.05);
+}
+*/
+
+a:focus {
+	border-radius: 10px;
+/*	outline-color: var(--colorWhiteTransparent);*/
+	outline-color: transparent !important;
+	outline-width: 0  !important;
+}
+
+a:active {
+	outline-color: transparent  !important;
+	outline-width: 0  !important;
+}
+
+p {
+	/* bootstrap fix */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.button {
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	padding: 10px 15px;
+	font-family: "Inter", Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 19px;
+	color: var(--colorGrayLight);
+	text-align: center;
+	text-decoration: none;
+/*	text-transform: uppercase;*/
+/*	letter-spacing: 0.05em;*/
+/*	background-color: unset;*/
+	background-color: var(--colorGrayOther);
+/*	background-color: var(--colorGrayAnother);*/
+/*	border: 2px solid var(--colorBlack);*/
+	border: unset;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.button.button_cart-add {
+	background-color: var(--colorGrayAnother);
+}
+
+.button-form {
+	color: var(--colorWhite);
+	background-color: var(--colorBlackSecondary);
+	border-radius: unset;
+}
+
+.button:hover {
+	color: var(--colorWhite);
+	background-color: var(--colorRose);
+/*	border: 2px solid var(--colorBlack);*/
+}
+
+.button:focus {
+	outline: 2px solid var(--colorBlackTransparent);
+	outline-offset: 5px;
+}
+
+.button[disabled] {
+	opacity: 0.25;
+	cursor: default;
+}
+
+.button--light {
+	color: var(--colorBlackMain);
+	background-color: unset;
+}
+
+.button--light:hover {
+	color: var(--colorWhite);
+	background-color: var(--colorBlackMain);
+}
+
+.button--dark {
+	color: var(--colorWhite);
+	background-color: unset;
+	border-color: var(--colorWhite);
+}
+
+.button--dark:hover {
+	color: var(--colorBlackMain);
+	background-color: var(--colorWhiteTransparent);
+	border-color: var(--colorWhiteTransparent);
+}
+
+.button--light-revert {
+	color: var(--colorWhite);
+	background-color: var(--colorBlack);
+}
+
+.button--light-revert:hover {
+	color: var(--colorBlack);
+	background-color: var(--colorWhite);
+}
+
+.button-wrapper--center {
+	text-align: center;
+}
+
+input {
+    padding: 16px;
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+	font-size: 16px;
+/*	font-weight: 500;*/
+	font-weight: 400;
+	line-height: 19px;
+	color: var(--colorBlackMain);
+    background-color: var(--colorWhite);
+    outline: unset;
+	border: 1px solid #f8f8f8;
+    border-radius: 5px;
+    transition: all 0.75s;
+}
+
+input::placeholder {
+	font-family: "Inter", Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 200;
+	line-height: 19px;
+/*	color: var(--colorGrayBullets);*/
+	color: var(--colorGrayLight);
+}
+
+input.normal::placeholder{
+	font-style: normal;
+}
+
+input.italic::placeholder {
+	font-style: italic;
+}
+
+input:hover {
+	border-color: #a0a0a0;
+}
+
+input:focus {
+	background-color: var(--colorWhite);
+	border-color: var(--colorRose);
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	
+    flex-shrink: 0;
+    flex-grow: 0;
+	
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin-right: 8px;
+    border: 0;
+    background-image: url("../icons/catalog/filters/icon-catalog-filters-check_false.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+	vertical-align: bottom;
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked, 
+input[type="radio"]:checked {
+    background-image: url("../icons/catalog/filters/icon-catalog-filters-check_true.svg");
+}
+
+input[type="checkbox"]:focus-visible, 
+input[type="checkbox"]:hover:not(:disabled), 
+input[type="radio"]:focus-visible, 
+input[type="radio"]:hover:not(:disabled) {
+	box-shadow: 0px 2px 10px rgba(166, 173, 255, 0.8);
+}
+
+input[type="checkbox"]:disabled, 
+input[type="radio"]:disabled {
+	background-image: url("../images/main/checkbox--disabled.svg");
+	cursor: not-allowed;
+}
+
+input[type="search"]::-ms-clear,
+input[type="search"]::-webkit-search-cancel-button {
+	display: none;
+}
+
+input::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+	display: block;
+/*
+	width: 8px;
+	height: 8px;
+*/
+	width: 22px;
+	height: 22px;
+	
+	--weight: 0px;
+	--aa: 1px; /* anti-aliasing */
+	--color: #a0a0a0;
+/*
+	background: linear-gradient(45deg, transparent calc(50% - var(--weight) - var(--aa)), var(--color) calc(50% - var(--weight)), var(--color) calc(50% + var(--weight)), transparent calc(50% + var(--weight) + var(--aa))),
+    linear-gradient(-45deg, transparent calc(50% - var(--weight) - var(--aa)), var(--color) calc(50% - var(--weight)), var(--color) calc(50% + var(--weight)), transparent calc(50% + var(--weight) + var(--aa)));
+*/
+	background-image: url("../icons/header/icon-search-reset.svg");
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.swiper-pagination-bullet {
+    transition: background 0.75s;
+}
+
+.fade-out {
+	opacity: 0 !important;
+	transition: opacity 1s 3s;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+
+
+/* ADD STYLES */
+
+.input--gray {
+    border: 1px solid #EBEBEB;
+    background: #F8F8F8;
+    color: var(--colorBlackMain);
+}
+
+.input--gray::placeholder {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.21;
+    color: var(--colorGrayLight);
+}
+
+.input--square {
+    border-radius: 0;
+}
+
+.textarea {
+    display: block;
+    padding: 20px;
+    margin: 0;
+    font-family: "Inter";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 19px;
+	color: var(--colorBlackMain);
+    background-color: var(--colorWhite);
+    outline: unset;
+	border: 1px solid #f8f8f8;
+    border-radius: 5px;
+    transition: all 0.75s;
+    scrollbar-width: thin;
+	resize: none;
+}
+
+.textarea::placeholder {
+	font-family: "Inter", Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 200;
+	line-height: 19px;
+}
+
+.textarea:hover {
+	border-color: #a0a0a0;
+}
+
+.textarea:focus {
+	background-color: var(--colorWhite);
+	border-color: var(--colorRose);
+}
+
+.textarea--gray {
+    border: 1px solid #EBEBEB;
+    background: #F8F8F8;
+}
+
+.textarea--gray::placeholder {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.21;
+    color: var(--colorGrayLight);
+}
+
+.textarea--square {
+    border-radius: 0;
+}
+
+/* /ADD STYLES */
+
+
+
+/* --- ADAPTING --- */
+
+@media (max-width: 1366px) {
+	
+	.wrapper {
+		max-width: 1180px;
+	}
+		
+}
+/* ↑↑↑ 1366px ↑↑↑ */
+
+
+
+@media (max-width: 1280px) {
+	
+	.wrapper {
+		max-width: 1180px;
+	}
+		
+}
+/* ↑↑↑ 1280px ↑↑↑ */
+
+
+
+@media (max-width: 1180px) {
+	
+	.wrapper {
+		max-width: 1024px;
+	}
+		
+}
+/* ↑↑↑ 1180px ↑↑↑ */
+
+
+
+@media (max-width: 1024px) {
+	
+	.wrapper {
+		max-width: 980px;
+	}
+	
+	.title--main {
+		font-size: 48px;
+	}
+		
+}
+/* ↑↑↑ 1024px ↑↑↑ */
+
+
+
+@media (max-width: 768px) {
+	
+	.wrapper {
+		max-width: 700px;
+	}
+		
+	
+}
+/* ↑↑↑ 768px ↑↑↑ */
+
+
+
+@media (max-width: 767px) {
+	
+/*
+	.main {
+		padding-top: 95px;
+	}
+*/
+		
+	
+}
+/* ↑↑↑ 767px ↑↑↑ */
+
+
+
+@media (max-width: 534px) {
+	
+	body {
+		font-size: 14px;
+	}
+	
+	.wrapper {
+		max-width: 95%;
+	}
+	
+	.title--main {
+		font-size: 32px;
+	}
+	
+	.title--section {
+		margin-bottom: 28px;
+/*		font-size: 28px;*/
+	}
+
+	.header .swiper-pagination {
+		bottom: 32px;
+	}
+	
+}
+/* ↑↑↑ 534px ↑↑↑ */
+
+
+
+@media (max-width: 429px) {
+	
+/*
+	.main {
+		padding-top: 200px;
+	}
+*/
+		
+	
+}
+/* ↑↑↑ 429px ↑↑↑ */
+
+
+
+@media (max-width: 375px) {
+
+
+	
+}
+/* ↑↑↑ 375px ↑↑↑ */
+
+
+
+@media (max-width: 320px) {
+	
+
+	
+}
+/* ↑↑↑ 320px ↑↑↑ */
+
+
+
+
+
+
+
+a:focus,
+a:active {
+
+/*outline: 0!important;*/
+
+/*outline-color: transparent!important;*/
+
+/*outline-width: 0!important;*/
+
+/*outline-style: none!important;*/
+
+
+}

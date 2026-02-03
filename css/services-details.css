@@ -1,0 +1,238 @@
+/* --- INSTALLATION --- */
+
+.section--service-banner {
+	margin-bottom: 75px;
+	color: var(--colorGrayOther);
+}
+
+.service-banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0 55px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 440px;
+	border-radius: 10px;
+}
+
+.service-banner_installation {
+	background-image: url("../images/services/installation/services-banner_installation.png");
+}
+
+.service-banner__title {
+	max-width: 50%;
+	margin-bottom: 10px;
+}
+
+.service-banner__description {
+	max-width: 50%;
+}
+
+.section--service-stages {
+	margin-bottom: 75px;
+}
+
+.service-stages {
+	display: flex;
+/*	align-items: flex-start;*/
+	flex-wrap: wrap;
+}
+
+.service-stage {
+	flex-basis: 25%;
+	max-width: 25%;
+	padding: 0 35px;
+	border-right: 1px solid var(--colorGrayDefault);
+}
+
+.service-stage:first-child {
+	padding-left: 0;
+}
+
+.service-stage:last-child {
+	padding-right: 0;
+	border-right: none;
+}
+
+.service-stage__num {
+	margin-bottom: 15px;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 58px;
+	color: var(--colorRed);
+}
+
+.service-stage__title {
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 19px;
+	color: var(--colorBlackSecondary);
+}
+
+.service-stage__text {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17px;
+	color: var(--colorBlackSecondary);
+}
+
+.section--service {
+	margin-bottom: 75px;
+}
+
+.section--service .title--section {
+	margin-bottom: 12px;
+}
+
+.section--service .service-description {
+	color: var(--colorBlackSecondary);
+}
+
+.section--installation {
+	margin-bottom: 75px;
+}
+
+.section--installation .title--section {
+	margin-bottom: 15px;
+}
+
+.section--installation .service-description {
+	margin-bottom: 30px;
+	color: var(--colorBlackSecondary);
+}
+
+.section--installation .inner {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.section--installation .inner .column_left, 
+.section--installation .inner .column_right {
+	flex-basis: 50%;
+	max-width: 50%;
+}
+
+.service-list {
+	padding-left: 25px;
+    list-style-type: disc;
+	line-height: 32px;
+	color: var(--colorBlackSecondary);
+}
+
+.service-list__item::marker {
+	color: var(--colorRose);
+}
+
+
+
+/* --- ADAPTING */
+
+@media (max-width: 1024px) {
+	
+	.service-stages {
+		row-gap: 15px;
+	}
+	
+	.service-stage {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+	
+	.service-stage:nth-child(odd) {
+		padding-left: 0;
+	}
+	
+	.service-stage:nth-child(even) {
+		padding-right: 0;
+		border-right: none;
+	}
+	
+	.service-banner__title {
+		max-width: 66%;
+	}
+
+	.service-banner__description {
+		max-width: 66%;
+	}
+	
+}
+/* ↑↑↑ 1024px ↑↑↑ */
+
+
+
+@media (max-width: 767px) {
+	
+	.service-banner {
+		height: 75vh;
+		padding: 15px;
+	}
+	
+		
+	.service-banner__title {
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.service-banner__description {
+		max-width: 100%;
+	}
+	
+	.service-stage {
+		flex-basis: 100%;
+		max-width: 100%;
+		padding: 0;
+		border: none;
+	}
+	
+	.section--installation .inner {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 40px;
+	}
+	
+	.section--installation .inner .column_left, .section--installation .inner .column_right {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+	
+	.section--service .title--section {
+		margin-bottom: 35px;
+	}
+	
+	.section--installation .title--section {
+		margin-bottom: 20px;
+	}
+	
+	.section--installation .service-description {
+		margin-bottom: 15px;
+	}
+	
+}
+/* ↑↑↑ 767px ↑↑↑ */
+
+
+
+@media (max-width: 429px) {
+	
+	.service-banner {
+		height: 66vh;
+	}
+	
+}
+/* ↑↑↑ 429px ↑↑↑ */
+
+
+
+@media (max-width: 375px) {
+	
+	.service-banner {
+		height: 90vh;
+	}
+	
+}
+/* ↑↑↑ 375px ↑↑↑ */

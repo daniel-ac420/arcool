@@ -1,0 +1,311 @@
+/* --- PROMOTIONS --- */
+
+.section--promotions {
+	margin: 75px 0 100px;
+}
+
+.promotions-items {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.promotions-item {
+	flex-basis: calc((100% - 20px) / 2);
+/*	border-radius: 18px;*/
+	box-shadow: 0 0 20px 0 rgba(38, 38, 38, 0.1);
+	display: flex;
+/*	flex-direction: column;*/
+/*	align-items: stretch;*/
+	
+}
+
+.promotions-item__image-link:hover {
+	transform: unset;
+	border: unset;
+	border-radius: 0 0 36px 36px;
+}
+
+.promotions-item__image-link {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.promotions-item__image {
+	display: block;
+	width: 100vw;
+	border-radius: 18px 18px 0 0;
+	transition: 1s;
+}
+
+.promotions-item__image:hover {
+	transform: scale(1.15);
+	filter: contrast(105%) brightness(125%) saturate(105%);
+}
+
+.promotions-item__info {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 226px;
+	padding: 20px 40px;
+	margin-bottom: auto;
+	background-color: var(--colorGrayDefault);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.promotions-item__info_01 {
+	background-image: url("../images/section--promotions/section--promotions__image_001.png");
+}
+
+.promotions-item__info_02 {
+	background-image: url("../images/section--promotions/section--promotions__image_002.png");
+}
+
+.promotions-item__info_03 {
+	background-image: url("../images/section--promotions/section--promotions__image_003.png");
+}
+
+.promotions-item__info_04 {
+	background-image: url("../images/section--promotions/section--promotions__image_004.png");
+}
+
+.promotions-item__info-inner {
+	position: absolute;
+}
+
+.promotions-item__title {
+	margin-bottom: 12px;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 29px;
+}
+
+.promotions-item__description {
+/*	margin-bottom: 24px;*/
+	max-width: 450px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.promotions-item__info_01 .promotions-item__info-inner {
+	left: 40px;
+	bottom: 20px;
+}
+
+.promotions-item__info_02 .promotions-item__info-inner {
+	left: 40px;
+	top: 20px;
+}
+
+.promotions-item__info_03 .promotions-item__info-inner {
+	right: 20px;
+	top: 20px;
+	max-width: 210px;
+}
+
+.promotions-item__info_04 .promotions-item__info-inner {
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.promotions-item__info_01 .promotions-item__title {
+	color: var(--colorRed);
+}
+
+.promotions-item__info_02 .promotions-item__title {
+	
+}
+
+.promotions-item__info_03 .promotions-item__title {
+	color: var(--colorWhite);
+}
+
+.promotions-item__info_04 .promotions-item__title {
+	font-size: 20px;
+	font-weight: 800;
+	line-height: 24px;
+	text-align: center;
+	color: var(--colorRed);
+}
+
+.promotions-item__info_01 .promotions-item__description {
+	
+}
+
+.promotions-item__info_02 .promotions-item__description {
+	color: #3c3c3c;
+
+}
+
+.promotions-item__info_03 .promotions-item__description {
+	color: var(--colorWhite);
+}
+
+.promotions-item__info_04 .promotions-item__description {
+	width: 450px;
+	text-align: center;
+	color: #a0a0a0;
+
+}
+
+
+.promotions-item__link {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 0 0 24px 24px;
+	font-size: 14px;
+}
+
+.promotions-item__link:hover {
+	border: unset;
+	transform: scale(1.15) translateX(25px);
+}
+
+.promotions-item__link-decor {
+	width: 24px;
+	height: 24px;
+	background-image: url("../icons/promotions/promotion-card-arrow.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+
+.promotions-item__link--more {
+	display: inline-block;
+	margin: 36px auto 0;
+	width: auto;
+	padding: 16px 24px;
+	text-align: center;
+	
+}
+
+.promotions-item__link--more:hover {
+	border: 2px solid transparent;
+	transform: unset;
+}
+
+.promotions-item__link--more .promotions-item__link-decor {
+	background-image: url("../icons/promotions/promotion-button-more-arrow.svg");
+	transition: all 0.75s;
+}
+
+.promotions-item__link--more:hover .promotions-item__link-decor {
+	filter: invert(1);
+}
+
+.promotions-items.swiper {
+    overflow: unset;
+}
+
+.section--promotions .swiper-slide {
+	height: unset;
+}
+
+.section--promotions .swiper-pagination {
+    position: relative;
+    /* display: none; */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(20px);
+}
+
+.section--promotions .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .section--promotions .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,14px);
+}
+
+.section--promotions .swiper-pagination-bullet {
+    background-color: var(--colorGrayBullets);
+    opacity: 1;
+}
+
+.section--promotions .swiper-pagination-bullet-active {
+    padding: 4px;
+    background-color: transparent;
+    border: 4px solid var(--colorPurple);
+}
+
+.section--promotions .button--light {
+	background: conic-gradient(from 0deg at 10% -125%, #ffffff, #ffffff, #ffffff);
+}
+
+.section--promotions .button--light:hover {
+    color: var(--colorWhite);
+    background: conic-gradient(from 45deg at 60% -25%, #433F86, #433d82, #323171, #2D2359, #432258, #CA4982, #652A61, #8C316C, #E773AB, #CA4982);
+}
+
+
+/* IMAGE HOVER */
+.promotions-item {
+	display: inline-block;
+    overflow: hidden;
+}
+
+.promotions-item__info {
+	transition: all 0.75s;
+	display: block;
+}
+
+.promotions-item__info:hover {
+	transform: scale(1.025);
+	filter: grayscale(0.4);
+}
+
+
+
+/* --- ADAPTING --- */
+
+@media (max-width: 1024px) {
+
+	.promotions-items {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	
+	.promotions-item__info.promotions-item__info_01 {
+		background-position: center top;
+	}
+	
+	.promotions-item__info_04 .promotions-item__description {
+		width: auto;
+	}
+
+}
+/* ↑↑↑ 1024px ↑↑↑ */
+
+
+
+@media (max-width: 534px) {
+
+	.section--promotions {
+		margin: 32px 0 36px;
+	}
+	
+	.promotions-item__info {
+		padding: 16px 20px;
+	}
+
+	.promotions-item__info.promotions-item__info_03 {
+		background-position: right center;
+	}
+	
+	.promotions-item__info_04 .promotions-item__info-inner {
+		position: static;
+		left: unset;
+		transform: unset;
+	}
+	
+}
+/* ↑↑↑ 534px ↑↑↑ */
+
+
+

@@ -1,0 +1,153 @@
+.section--request {
+	margin-top: 75px;
+}
+
+.section--request .inner {
+	display: flex;
+	align-items: flex-start;
+	gap: 50px;
+	padding: 35px;
+	border: 2px solid #dfdfdf;
+	border-radius: 5px;
+}
+
+.section--request .title--section {
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+.section--request .inner-part-left {
+	
+}
+
+.section--request .inner-part-right {
+	max-width: calc((100% - 50px) * 0.6);
+	flex-basis: 100%;
+}
+
+.section--request .description {
+	color: var(--colorBlackSecondary);
+}
+
+.section--request .form-fieldset {
+	width: 100%;
+}
+
+.section--request .form-fieldset__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.section--request .form-fieldset__input {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+	background-color: var(--colorGrayOther);
+	border-radius: unset;
+}
+
+.section--request .form-fieldset__input:focus {
+	background-color: var(--colorWhite);
+}
+
+.section--request .form-fieldset__input_half {
+    width: 50%;
+}
+
+.section--request .submit-box {
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	gap: 20px;
+	margin-top: 15px;
+}
+
+.section--request .submit-box .button-form {
+	padding: 12px;
+	min-width: 300px;
+}
+
+.section--request .filter__form-label {
+	margin-bottom: 0;
+}
+
+
+
+/* --- ADAPTING --- */
+@media (max-width: 1280px) {
+	
+	.section--request .submit-box .button-form {
+		min-width: 200px;
+	}
+	
+}
+/* ↑↑↑ 1280px ↑↑↑ */
+
+
+
+@media (max-width: 1180px) {
+	
+	.section--request .submit-box .button-form {
+		min-width: 150px;
+	}
+	
+}
+/* ↑↑↑ 1180px ↑↑↑ */
+
+
+
+@media (max-width: 1024px) {
+	
+	.section--request .inner {
+		flex-direction: column;
+	}
+	
+	.section--request .inner {
+		align-items: stretch;
+	}
+	
+	.section--request .inner-part-right {
+		max-width: 100%;
+		flex-basis: 100%;
+	}
+	
+	
+}
+/* ↑↑↑ 1024px ↑↑↑ */
+
+
+
+@media (max-width: 767px) {
+	
+	.section--request .form-fieldset__input_half {
+		width: 100%;
+	}	
+	
+	.section--request .form-fieldset__wrapper {
+        flex-wrap: wrap;
+    }
+	
+	.section--request .submit-box {
+		flex-direction: column;
+	}
+	
+	.section--request .submit-box .button-form {
+		min-width: 50%;
+	}
+	
+}
+/* ↑↑↑ 767px ↑↑↑ */
+
+
+
+@media (max-width: 540px) {
+		
+	.section--request .submit-box .button-form {
+		min-width: 100%;
+	}
+	
+}
+/* ↑↑↑ 540px ↑↑↑ */

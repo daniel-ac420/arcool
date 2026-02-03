@@ -1,0 +1,44 @@
+﻿/* MAIN */
+@import "fonts.css";
+@import "main-categories_list.css";
+@import "main-banner.css";
+@import "main-bestsellers.css";
+@import "main-promotions.css";
+@import "main-sales.css";
+@import "main-categories_images.css";
+@import "main-about.css";
+@import "main-partners.css";
+@import "main-feedback.css";
+@import "main-products.css";
+@import "main-request.css";
+
+/* CATALOG */
+@import "breadcrumbs.css";
+@import "catalog-products.css";
+@import "catalog-filters.css";
+@import "catalog-select.css";
+@import "catalog-popular.css";
+@import "catalog-tags.css";
+@import "comparison.css";
+@import "favors.css";
+@import "catalog-request.css";
+
+/* CATALOG DETAIL */
+@import "catalog-details.css";
+
+/* CONTENT PAGES */
+@import "content-pages__main.css";
+/*@import "payment.css";*/
+@import "delivery.css";
+@import "about.css";
+@import "contacts.css";
+@import "services.css";
+@import "services-details.css";
+
+/* CART */
+@import "cart.css";
+@import "checkout.css";
+
+
+/* VARIOUS */
+@import "404.css";

@@ -1,0 +1,25 @@
+.button_cart-add.active {
+	color: var(--colorWhite);
+	background-color: var(--colorRed);
+}
+
+.button_cart-add.active svg path {
+	stroke: var(--colorWhite);
+}
+
+.bestsellers-item__controls.active {
+	background-color: var(--colorRed);
+}
+
+.bestsellers-item__controls.active svg path {
+	fill: var(--colorWhite);
+/*	stroke: var(--colorWhite);*/
+}
+
+.products-item__controls.active {
+	background-color: var(--colorRed);
+}
+
+.products-item__controls.active svg path {
+	fill: var(--colorWhite);
+}

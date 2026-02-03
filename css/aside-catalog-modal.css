@@ -1,0 +1,180 @@
+.aside_catalog-modal {
+	display: none;
+	position: fixed;
+	inset: 0;
+	top: 119px;
+	z-index: 100000;
+	height: calc(100vh - 119px);
+	padding-top: 5vh;
+	background-color: var(--colorWhite);
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: var(--colorRed) var(--colorGrayDark);
+}
+
+.aside_catalog-modal.active {
+	display: block;
+}
+
+.aside_catalog-modal .inner {
+	display: flex;
+}
+
+/* Style the tab */
+.aside_catalog-modal .tab {
+    float: left;
+    display: flex;
+    flex-direction: column;
+	gap: 10px;
+	width: auto;
+	min-width: 260px;
+	padding-right: 15px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.aside_catalog-modal .tab button {
+    display: inline-block;
+    background-color: inherit;
+    color: var(--colorBlackMain);
+    padding: 10px 25px;
+    width: 100%;
+	font-family: "Inter", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17px;
+    border: none;
+	border-radius: 5px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* Change background color of buttons on hover */
+.aside_catalog-modal .tab button:hover {
+	color: var(--colorRed);
+    background-color: var(--colorRose);
+}
+
+/*
+.aside_catalog-modal .tab button:hover {
+	background-color: #ddd;
+}
+*/
+
+/* Create an active/current "tab button" class */
+.aside_catalog-modal .tab button.active {
+    background-color: var(--colorGrayOther);
+}
+
+.aside_catalog-modal .tab button.active:hover {
+	color: var(--colorBlackMain);
+	cursor: default;
+}
+
+/* Style the tab content */
+.aside_catalog-modal .tabcontent {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 50px;
+	row-gap: 35px;
+    float: left;
+    padding: 0 12px 0 40px;
+/*    width: 70%;*/
+	border-left: 1px solid var(--colorGrayOther);
+}
+
+.aside_catalog-modal .category__item {
+	display: flex;
+	flex-direction: column;
+}
+
+.aside_catalog-modal .category__list {
+	display: flex;
+	flex-direction: column;
+}
+
+.aside_catalog-modal #category-2 {
+	display: none;
+}
+
+.aside_catalog-modal #category-3 {
+	display: none;
+}
+
+.aside_catalog-modal #category-4 {
+	display: none;
+}
+
+.aside_catalog-modal .button_close {
+	display: none;
+}
+
+.aside_catalog-modal .category__title {
+	margin-bottom: 10px;
+	font-size: 24px;
+	line-height: 1.5;
+/*	line-height: normal;*/
+}
+
+.aside_catalog-modal .category__list-item {
+	cursor: pointer;
+}
+
+.aside_catalog-modal .category__list-item-link {
+	display: block;
+}
+
+.aside_catalog-modal .category__list-item:hover .category__list-item-link {
+	color: var(--colorRose);
+}
+
+
+
+
+
+@media (max-width: 767px) {
+	
+	.aside_catalog-modal {
+/*
+		top: 95px;
+		height: calc(100vh - 95px);
+*/
+		top: 0;
+		height: 100vh;
+	}
+	
+	.aside_catalog-modal .inner {
+		flex-direction: column;
+		gap: 20px;
+		padding-top: 60px;
+	}
+	
+	.aside_catalog-modal .button_close {
+		position: absolute;
+		top: 10px;
+		left: unset;
+		right: 25px;
+		display: inline-block;
+	}
+	
+	.aside_catalog-modal .tabcontent {
+		padding: 0 25px;
+	}
+
+}	
+/* ↑↑↑ 767px ↑↑↑ */
+
+
+
+@media (max-width: 429px) {
+	
+/*
+	.aside_catalog-modal {
+		top: 200px;
+		height: calc(100vh - 200px);
+	}
+*/
+
+}	
+/* ↑↑↑ 429px ↑↑↑ */

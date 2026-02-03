@@ -1,0 +1,134 @@
+.section--sales {
+	margin: 75px 0 0;
+}
+
+.section--sales .title--section {
+	text-align: left;
+}
+
+.section--sales .bestsellers-items {
+	max-width: unset;
+}
+
+.timer-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 24px;
+	padding: 20px 25px 20px 55px ;
+/*	background-color: #ffeaea;*/
+	background-image: url("../images/section--sales/sales-background_desktop.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	border-radius: 5px;
+	box-shadow: 2px 4px 11px 0px #ff000040;
+}
+
+.timer-box__info {
+	
+}
+
+.timer-box__title {
+	margin-bottom: 5px;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 29px;
+	color: #3c3c3c;
+}
+
+.timer-box__description {
+	color: #3c3c3c;
+}
+
+.timer-box__counting {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+}
+
+.timer-box__counting__item  {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.timer-box__digit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	padding: 30px 24px;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 29px;
+	background-color: var(--colorWhite);
+	border-radius: 20px;
+}
+
+.section--sales .slick-arrow {
+	display: none !important;
+}
+
+.section--sales .button {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.section--sales .slick-slide {
+	margin-left: 2.5px;
+	margin-right: 2.5px;
+}
+
+
+
+@media (max-width: 1024px) {
+	
+	.timer-box {
+		padding: 20px;
+	}
+	
+}
+/* ↑↑↑ 1024px ↑↑↑ */
+
+
+
+@media (max-width: 819px) {
+	
+	.timer-box__seconds {
+		display: none;
+	}
+	
+}
+/* ↑↑↑ 819px ↑↑↑ */
+
+
+
+@media (max-width: 767px) {
+	
+	.timer-box {
+		flex-direction: column;
+		align-items: flex-start;
+		background-image: url("../images/section--sales/sales-background_moblie.png");
+		box-shadow: 2px 4px 11px 0px #002aff40;
+	}
+	
+}
+/* ↑↑↑ 767px ↑↑↑ */
+
+
+
+@media (max-width: 320px) {
+	
+	.timer-box {
+		padding: 10px;
+	}
+	
+	.timer-box__counting {
+		gap: 10px;
+	}
+	
+}
+/* ↑↑↑ 320px ↑↑↑ */

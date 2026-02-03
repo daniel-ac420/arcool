@@ -1,0 +1,93 @@
+.aside-catalog-add {
+	display: none;
+	opacity: 0;
+	transition: opacity 5s;
+}
+
+.aside-catalog-add.active {
+/*	position: absolute;*/
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 10vw;
+	z-index: 1000001;
+	display: block;
+	opacity: 1;
+}
+
+.aside-catalog-add .inner {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	background-color: var(--colorGrayOther);
+	border-radius: 20px;
+}
+
+.aside-catalog-add__image {
+	margin-left: auto;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border: 1px solid #b0b0b0;
+	border-radius: 50%;
+}
+
+.aside-catalog-add__descr {
+	max-width: 33%;
+	margin-left: 15px;
+	margin-right: 20px;
+}
+
+.aside-catalog-add__info {
+	margin-bottom: 5px;
+}
+
+.aside-catalog-add__title {
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--colorGrayLight);
+}
+
+.aside-catalog-add__title a {
+	line-height: 17px;
+}
+
+.aside-catalog-add__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 15px 10px 45px;
+	margin-right: auto;
+	background-color: var(--colorWhite);
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: center left 15px;
+	background-size: ;
+	transition: all 0.5s;
+}
+
+.aside-catalog-add.aside-catalog-add_compare .aside-catalog-add__link {
+	background-image: url("../icons/catalog-detail/aside/icon-catalog-aside-plate_compares.svg");
+}
+
+.aside-catalog-add.aside-catalog-add_favors .aside-catalog-add__link {
+	background-image: url("../icons/catalog-detail/aside/icon-catalog-aside-plate_favors.svg");
+}
+
+.aside-catalog-add__link:hover {
+	color: var(--colorWhite);
+	background-color: var(--colorRed);
+}
+
+.aside-catalog-add.aside-catalog-add_compare .aside-catalog-add__link:hover {
+	background-image: url("../icons/catalog-detail/aside/icon-catalog-aside-plate_compares_hover.svg");
+}
+
+.aside-catalog-add.aside-catalog-add_favors .aside-catalog-add__link:hover {
+	background-image: url("../icons/catalog-detail/aside/icon-catalog-aside-plate_favors_hover.svg");
+}
+
+.aside-catalog-add .button_close {
+	left: unset;
+	margin-right: auto;
+}

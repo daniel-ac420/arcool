@@ -1,0 +1,224 @@
+.catalog__pagination {
+	margin-bottom: 50px;
+}
+
+.pagination-button {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    background: none;
+    color: #101010;
+    line-height: 1;
+    touch-action: manipulation;
+    box-shadow: none;
+    cursor: pointer;
+    appearance: none;
+    text-overflow: ellipsis;
+/*
+    transition: background .15s linear,
+                box-shadow .15s linear,
+                color .15s linear,
+                border 0.15s linear;
+*/
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 22.5px;
+    height: 48px;
+
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.33;
+}
+
+.pagination-button--active {
+    color: var(--colorWhite);
+    background-color: #b4b4b4;
+    border: 1px solid #b4b4b4;
+}
+
+.pagination-button--active:hover {
+	background-color: #b4b4b4;
+}
+
+.pagination-button--wide {
+    width: 100%;
+}
+
+.section--catalog .catalog__pagination {
+	margin-top: 30px;
+}
+
+.catalog-favors + .catalog__pagination {
+	margin-top: 30px;
+}
+
+.section--catalog .pagination-button {
+	width: auto;
+}
+
+.round-button {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    border: none;
+    border-radius: 100px;
+    background: none;
+    color: var(--colorGrayLight);
+    line-height: 1;
+    touch-action: manipulation;
+    box-shadow: none;
+    cursor: pointer;
+    appearance: none;
+    text-overflow: ellipsis;
+/*
+    transition: background .15s linear,
+                box-shadow .15s linear,
+                color .15s linear,
+                border 0.15s linear;
+*/
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 21px;
+    height: 27px;
+    background-color: #FFFFFF;
+
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.21;
+}
+
+.square-button {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    background: none;
+    color: var(--colorWhite);
+    line-height: 1;
+    touch-action: manipulation;
+    box-shadow: none;
+    cursor: pointer;
+    appearance: none;
+    text-overflow: ellipsis;
+/*
+    transition: background .15s linear,
+                box-shadow .15s linear,
+                color .15s linear,
+                border 0.15s linear;
+*/
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 23px;
+    height: 43px;
+
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.21;
+    background-color: var(--colorGrayOther);
+}
+
+.square-button--black {
+    color: var(--colorWhite);
+    background-color: var(--colorBlackSecondary);
+}
+
+.pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pagination__more {
+    flex-grow: 1;
+}
+
+.pagination__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+}
+
+/* костыль: увеличиваем специфичность
+селектора вложенностью
+чтобы надежно перебить стили pagination-button */
+.pagination .pagination__button--show-on-pc {
+    display: none;
+}
+
+
+
+@media (min-width: 1024px) {
+	
+    .pagination-button {
+        padding: 0 31px;
+        height: 56px;
+    }
+
+    .pagination .pagination__button--show-on-pc {
+        display: flex;
+    }
+	
+}
+
+
+
+@media (min-width: 768px) {
+	
+    .pagination {
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-between;
+        gap: 40px;
+		flex-wrap: wrap;
+    }
+	
+}
+
+
+
+@media (max-width: 413px) {
+	
+	.pagination-button {
+		padding: 0 15px;
+		font-size: 16px;
+	}
+	
+}
+
+
+
+@media (max-width: 320px) {
+	
+	.pagination-button {
+		padding: 0 12px;
+	}
+	
+}
